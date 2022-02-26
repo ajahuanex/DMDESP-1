@@ -28,8 +28,11 @@ while not client.connected_flag: #wait in loop
     print("In wait loop")
     time.sleep(1)
 print("in Main Loop")
+client.publish("Temperature","ok")
 client.loop_stop()    #Stop loop 
-client.disconnect() # disconnect
+# client.disconnect() # disconnect
+
+client.publish("Temperature","ok again")
 
 
 a=[]
